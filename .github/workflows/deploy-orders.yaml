@@ -16,7 +16,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
-      - run: cd orders && docker build -t haridalavai/orders .
+      - run: cd orders && docker build -t haridalavai/order .
       - run: docker push haridalavai/order
       - uses: digitalocean/action-doctl@v2
         with:
