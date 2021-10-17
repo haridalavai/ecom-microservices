@@ -14,6 +14,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: digitalocean/action-doctl@v2
         with:
-          token: ${{secrets.DIGITLOCEAN_ACCESS_TOKEN}}
+          token: ${{secrets.DIGITALOCEAN_ACCESS_TOKEN}}
       - run: doctl kubernetes cluster kubeconfig save 679ae372-8c91-495f-9935-32d57241a169
       - run: kubectl apply -f infra/k8 && -f infra/k8s-prod
