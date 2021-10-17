@@ -85,7 +85,7 @@ it("returns a 201 with valid inputs", async () => {
   });
 
   expect(stripeCharge).toBeDefined();
-  expect(stripeCharge!.currency).toEqual("usd");
+  expect(stripeCharge!.currency).toEqual("inr");
 
   const payment = await Payment.findOne({
     orderId: order.id,

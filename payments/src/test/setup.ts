@@ -10,6 +10,8 @@ let mongo: any;
 
 jest.mock("../nats-wrapper");
 
+process.env.STRIPE_KEY =
+  "sk_test_51Jk8DoSBgTW9fgXIOJ3GLwDTaBR8jO0nfKmJrpWFvsZp9fwD03G2RA0GZyYvMIAsLf9paPbal7N6xfeIzLlfiPI1008qHx94c9";
 beforeAll(async () => {
   process.env.JWT_KEY = "asdfasdf";
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
