@@ -6,6 +6,8 @@ import { OrderCancelledEvent, OrderStatus } from "@ticketing-test/common";
 import { app } from "./app";
 import { OrderCancelledListener } from "./events/listeners/order-cancelled-listener";
 const start = async () => {
+  console.log("tick change");
+
   if (!process.env.JWT_KEY) {
     throw new Error("JWT_KEY must be defined");
   }
